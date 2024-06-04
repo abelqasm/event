@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { Module1Module } from './module1/module1.module';
 import { Module2Module } from './module2/module2.module';
 import { Module3Module } from './module3/module3.module';
@@ -17,7 +16,6 @@ import { EventEmitterModule } from '@nestjs/event-emitter';
     Module5Module,
     EventEmitterModule.forRoot(),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController]
 })
 export class AppModule {}
